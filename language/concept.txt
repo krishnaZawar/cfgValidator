@@ -1,0 +1,13 @@
+The validator will read cfg content from a file and verify if it is syntactically correct.
+
+The file in which the cfg will be written should follow a specific format:
+    Tokens : <list of tokens separated by commas> .         Note : This list can be empty
+                                                            Note : We will not use the or logic for simplicity.
+        prodHead -> prodBody ;                                      If a prodHead has two heads write it two times. 
+        .
+        .
+
+
+    example:
+        Tokens : identifier, number.
+            assignment -> identifier '=' number ';' ;

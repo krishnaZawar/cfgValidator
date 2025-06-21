@@ -1,0 +1,13 @@
+Token definition:
+    1. keywords : 'Tokens'
+
+    2. identifiers : [a-zA-Z][a-zA-Z0-9]*
+        can be used for:
+            1. prodHead
+            2. tokenNames
+    
+    3. special characters: ':' ',' '.' ';'
+
+    4. stringLiteral
+
+    5. end of line : ';'

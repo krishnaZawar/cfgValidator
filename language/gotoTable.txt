@@ -1,0 +1,52 @@
+0 : 
+        Start -> 3      TokenBlock -> 2 'Tokens' -> s 1
+1 :
+        ':' -> s 4
+2 :
+        ProdList -> 7   ProdStatement -> 6      identifier -> s 5
+3 :
+        $ -> acc
+4 :
+        TokenList -> 10 identifier -> s 9       '.' -> s 8
+5 :
+        ':' -> s 11
+6 :
+        MoreProdStatements -> 13        ProdStatement -> 12     $ -> r 5        identifier -> s 5
+7 :
+        $ -> r 13
+8 :
+        identifier -> r 12
+9 :
+        '.' -> r 10     ',' -> s 14
+10 :
+        '.' -> s 15
+11 :
+        ProdBody -> 19  SubPart -> 18   stringLiteral -> s 17   identifier -> s 16
+12 :
+        MoreProdStatements -> 20        ProdStatement -> 12     $ -> r 5        identifier -> s 5
+13 :
+        $ -> r 8
+14 :
+        TokenList -> 21 identifier -> s 9
+15 :
+        identifier -> r 11
+16 :
+        stringLiteral -> r 0    identifier -> r 0
+17 :
+        stringLiteral -> r 1    identifier -> r 1
+18 : 
+        ';' -> r 7      MoreSubParts -> 23      SubPart -> 22   stringLiteral -> s 17   identifier -> s 16
+19 :
+        ';' -> s 24
+20 :
+        $ -> r 4
+21 :
+        '.' -> r 9
+22 :
+        ';' -> r 7      MoreSubParts -> 25      SubPart -> 22   stringLiteral -> s 17   identifier -> s 16
+23 :
+        ';' -> r 3
+24 : 
+        identifier -> r 2
+25 :
+        ';' -> r 6

@@ -1,0 +1,5 @@
+Tokens : id, num.
+Start : AdditionExpression;
+AdditionExpression : Part '+' Part;
+Part : id;
+Part : num;

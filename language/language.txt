@@ -1,0 +1,14 @@
+Start : TokenBlock ProdList
+
+TokenBlock : 'Tokens' ':' TokenList '.' |
+             'Tokens' ':' '.'
+TokenList  : identifier ',' TokenList |
+             identifier
+
+ProdList : ProdStatement moreProdStatements
+moreProdStatements : ProdStatement moreProdStatements | ""
+ProdStatement : identifier ':' ProdBody ';'
+ProdBody : SubPart moreSubParts  
+moreSubParts : SubPart moreSubParts | ""
+SubPart : identifier | 
+          stringLiteral
