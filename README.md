@@ -29,7 +29,7 @@ A : 'a';
 example 2:
 CFG to validate assignment statement
 ```
-Tokens : identifier, number;
+Tokens : identifier, number.
 Start : AssignmentStatement;
 AssignmentStatement : identifier '=' Value ';' ;
 Value : identifier;
