@@ -7,7 +7,7 @@
             1. A -> pBq
                     follow(B) = first(q)
             2. A -> pB
-                    follow(B) = follow(A)
+                    follow(B) = follow(A) U follow(B)
             3. A -> pBq, first(q) has ""
                     follow(B) = (first(q) - {""}) U follow(A)
 */
