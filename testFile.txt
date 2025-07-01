@@ -1,5 +1,5 @@
-Tokens : id, num.
-Start : AdditionExpression;
-AdditionExpression : Part '+' Part;
-Part : id;
-Part : num;
+Tokens : identifier, number.
+Start : AssignmentStatement;
+AssignmentStatement : identifier '=' Value ';' ;
+Value : identifier;
+Value : number;

@@ -56,9 +56,6 @@ FirstFollowSet computeFollowSets(Grammar grammar, FirstFollowSet firstSet, strin
                             for(auto follow : followSet[prodHead]){
                                 followSet[prodBody[i]].insert(follow);
                             }
-                            for(auto follow : followSet[prodBody[i]]){
-                                followSet[prodHead].insert(follow);
-                            }
                         }
                         if(oldSize != followSet[prodBody[i]].size()) changed = true;
                     }
